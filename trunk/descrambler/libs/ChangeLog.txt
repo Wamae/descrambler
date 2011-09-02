@@ -1,0 +1,42 @@
+#summary Details of what's changed with each Tesjeract version.
+
+= Tesjeract Change Log =
+
+== Version 0.3.3 - 10th August 2011 ==
+
+ * Don't use += in configure because Solaris doesn't support it
+
+== Version 0.3.2 - 18th June 2010 ==
+
+ * Link against MSVCRT.DLL 9.0.30729.1, not 9.0.21022.8 because
+   that seems to be what TESSDLL.DLL uses
+
+== Version 0.3.1 - 4th June 2010 ==
+
+ * Statically link libgcc in MinGW version
+ * Patch libtool to fix -Wl,--as-needed
+ * Optimise and strip Windows binary
+
+== Version 0.3 - 23rd May 2010 ==
+
+ * Complete revamp!
+ * Now works on Linux and possibly other Unixes
+ * Also builds with MinGW, even on Linux
+ * Apache Ant script for Java stuff
+ * Support for BMP images added
+ * Compressed TIFFs no longer work in Windows (at least for now)
+ * Errors return empty results instead of terminating the process
+ * tessdata path can be queried using Tesjeract.getTessdataPath()
+ * A fallback can also be set using Tesjeract.setTessdataFallback()
+ * Avaliable languages can be queried with Tesjeract.getLanguages()
+ * Eclipse stuff removed (Sorry! Use autotools/mingw32-make instead)
+
+== Version 0.2 - 30th March 2008 ==
+
+ * Can build with Eclipse CDT or Visual Studio
+
+== Version 0.1 - 29th March 2008 ==
+
+ * Initial version
+ * Support for TIFF images
+ * Windows support only

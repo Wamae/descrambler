@@ -1,0 +1,31 @@
+#summary Frequently Asked Questions about Tesjeract.
+
+= Frequently Asked Questions =
+
+== What is this thing? ==
+
+This library allows you to use the [http://tesseract-ocr.googlecode.com Tesseract OCR] engine from within Java. If you're not a Java developer and you're not trying to run some software that already requires Tesjeract then you're probably lost. :)
+
+== I get an Unsatisfied Link Error. What gives? ==
+
+Please don't file an issue about this, especially if you're on Windows and you didn't build Tesjeract yourself. If you're using `System.loadLibrary` then `tessdll.dll` and `tesjeract.dll` need to be in the current directory or in `C:\Windows\System32`. If you're using `System.load` then `tessdll.dll` needs to be loaded first. You also need the [http://www.microsoft.com/downloads/details.aspx?familyid=a5c84275-3b97-4ab7-a40d-3802b2af5fc2 Microsoft Visual C++ 2008 SP1 Redistributable Package]. Note that this is the SP1 version. The original version will not work! If it's still not working then it's very likely that you got one of these wrong.
+
+== Why does Tesjeract keep making Java crash? ==
+
+Don't use Sun's Virtual Machine, especially on Linux. If you have to, use a recent version. Otherwise, use OpenJDK. This is available on Ubuntu as `openjdk-6-jdk` and Gentoo as `dev-java/icedtea`.
+
+== Where is the Linux binary? ==
+
+Linux is well-supported by Tesjeract but because architectures, distributions and requirements vary so much, we felt it would be silly to try and please everyone. Most Linux users are capable of building software themselves anyway.
+
+== Where is the OS X binary? ==
+
+It would make sense to release an OS X binary but the simple fact is that we don't currently have access to a Mac!
+
+== Where is the 64-bit Windows binary? ==
+
+We will provide one when Tesseract itself provides a 64-bit Windows binary.
+
+== What about Tesseract 3? ==
+
+It is currently unclear if or when this will ever be released. We did try to target it at one point but had little success in getting it to work.

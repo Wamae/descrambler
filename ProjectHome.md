@@ -1,0 +1,1 @@
+OCR Scrambler Solver for Android
